@@ -1,6 +1,6 @@
 # Item & Purchase Management System
 
-A simple Node.js + Express.js + MySQL web application implementing the Kartika Consultancy assignment.
+A simple Node.js + Express.js + MySQL web application implementing the Item & Purchase Management System.
 
 ## Features
 - Item type management
