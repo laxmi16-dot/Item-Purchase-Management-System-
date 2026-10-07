@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item & Purchase Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Item & Purchase Management System</h1></header>
+<nav>
+  <button onclick="showSection('items')">Items</button>
+  <button onclick="showSection('types')">Item Types</button>
+  <button onclick="showSection('purchase')">Create Purchase</button>
+  <button onclick="showSection('purchases')">Purchase History</button>
+</nav>
+<main>
+<section id="items" class="section">
+  <h2>Item Master</h2>
+  <form id="itemForm">
+    <input type="hidden" id="itemId">
+    <label>Item Name <input id="itemName" required></label>
+    <label>Item Type <select id="itemType" required></select></label>
+    <label>Purchase Date <input type="date" id="purchaseDate" required></label>
+    <label>Stock Available <input type="number" id="stock" min="0" required></label>
+    <label>Status <select id="active"><option value="1">Active</option><option value="0">Inactive</option></select></label>
+    <button type="submit">Save Item</button><button type="button" onclick="resetItemForm()">Clear</button>
+  </form>
+  <div id="itemMessage" class="message"></div>
+  <table><thead><tr><th>ID</th><th>Name</th><th>Type</th><th>Date</th><th>Stock</th><th>Availability</th><th>Status</th><th>Actions</th></tr></thead><tbody id="itemsBody"></tbody></table>
+</section>
+
+<section id="types" class="section hidden">
+  <h2>Item Types</h2>
+  <form id="typeForm">
+    <input id="typeName" placeholder="e.g. Electronics" required>
+    <button id="typeSubmit">Add Type</button>
+    <button id="typeCancel" class="hidden" type="button" onclick="cancelTypeEdit()">Cancel</button>
+  </form>
+  <div id="typeMessage" class="message"></div>
+  <ul id="typesList"></ul>
+</section>
+
+<section id="purchase" class="section hidden">
+  <h2>Create Purchase</h2>
+  <form id="purchaseForm">
+    <label>Order ID <input id="orderId" placeholder="PO-00001"></label>
+    <label>Purchase Date <input type="date" id="purchaseDate2" required></label>
+    <div class="line"><select id="purchaseItem"></select><input type="number" id="quantity" min="1" placeholder="Quantity"><button type="button" onclick="addLine()">Add Item</button></div>
+    <ul id="cart"></ul><button type="submit">Submit Purchase</button>
+  </form><div id="purchaseMessage" class="message"></div>
+</section>
+
+<section id="purchases" class="section hidden">
+  <h2>Purchase History</h2>
+  <table><thead><tr><th>ID</th><th>Order ID</th><th>Date</th><th>Items</th><th>Total Qty</th><th>Actions</th></tr></thead><tbody id="purchasesBody"></tbody></table>
+  <div id="purchaseDetails"></div>
+
+  <div id="purchaseEditBox" class="edit-box hidden">
+    <h3>Edit Purchase: <span id="editPurchaseId"></span></h3>
+    <form id="purchaseEditForm">
+      <label>Purchase Date <input type="date" id="editPurchaseDate" required></label>
+      <div id="editPurchaseLines"></div>
+      <button type="submit">Save Purchase</button>
+      <button type="button" onclick="cancelPurchaseEdit()">Cancel</button>
+    </form>
+    <div id="purchaseEditMessage" class="message"></div>
+    
+  </div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

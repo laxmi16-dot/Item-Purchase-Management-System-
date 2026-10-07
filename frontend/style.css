@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #222
+}
+
+header {
+    background: #243447;
+    color: white;
+    padding: 24px;
+    text-align: center
+}
+
+header h1 {
+    margin: 0 0 6px
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    padding: 14px;
+    background: white;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 4px #bbb
+}
+
+button {
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #243447;
+    color: white
+}
+
+button[type=button] {
+    background: #687684
+}
+
+main {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 15px
+}
+
+.section {
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px #ddd
+}
+
+.hidden {
+    display: none
+}
+
+form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: end;
+    margin-bottom: 20px
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold
+}
+
+input,
+select {
+    padding: 9px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    min-width: 150px
+}
+
+.line {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left
+}
+
+th {
+    background: #eef1f4
+}
+
+.message {
+    margin: 10px 0;
+    min-height: 22px
+}
+
+ul {
+    padding-left: 20px
+}
+
+.cart-line {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 6px 0
+}
+
+small {
+    color: #666
+}
+
+@media(max-width:700px) {
+    table {
+        font-size: 12px
+    }
+
+    .line {
+        flex-wrap: wrap
+    }
+
+    nav {
+        flex-wrap: wrap
+    }
+}
+
+.type-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.edit-box {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.edit-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    padding: 8px;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.edit-line input {
+    width: 100px;
+}
+
+.hidden {
+    display: none !important;
+}
