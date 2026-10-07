@@ -21,7 +21,14 @@ A simple Node.js + Express.js + MySQL web application implementing the Kartika C
 
 ## Database setup
 1. Start MySQL on XAMPP.
-2. Run `db/schema.sql` in MySQL Workbench or MySQL command line.
+
+2. Create the database
+Open phpMyAdmin:
+http://localhost/phpmyadmin
+Go to SQL.
+Open this file from the project: db/schema.sql
+Copy its contents into phpMyAdmin's SQL box and click Go.
+
 3. This creates database `item_purchase_db` and sample item types.
 
 ## Backend setup
